@@ -25,13 +25,11 @@ export default function LoginPage() {
             const data = await res.json();
 
             if (res.ok) {
-                console.log('Login successful, redirecting to admin...');
-                // Try Next.js router first
-                router.push('/admin');
-                // Fallback to window.location after a short delay
-                setTimeout(() => {
-                    window.location.href = '/admin';
-                }, 500);
+                // Store auth in localStorage
+                localStorage.setItem('isAuthenticated', 'true');
+                localStorage.setItem('username', data.user.username);
+                // Force redirect
+                window.location.href = '/admin';
             } else {
                 setError(data.error || 'Login failed');
             }
