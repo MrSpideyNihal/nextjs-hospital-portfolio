@@ -84,21 +84,29 @@ export default function AdminDashboard() {
                 <div className="bg-white rounded-lg shadow p-6">
                     <h2 className="text-xl font-bold mb-4">Quick Actions</h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-                        <button className="bg-blue-600 text-white p-4 rounded-lg hover:bg-blue-700 transition-colors">
+                        <button
+                            onClick={() => router.push('/admin/doctors')}
+                            className="bg-blue-600 text-white p-4 rounded-lg hover:bg-blue-700 transition-colors"
+                        >
                             <div className="text-2xl mb-2">👨‍⚕️</div>
                             <div className="font-medium">Manage Doctors</div>
                         </button>
-                        <button className="bg-green-600 text-white p-4 rounded-lg hover:bg-green-700 transition-colors">
+                        <button
+                            onClick={() => router.push('/admin/blogs')}
+                            className="bg-green-600 text-white p-4 rounded-lg hover:bg-green-700 transition-colors"
+                        >
                             <div className="text-2xl mb-2">📝</div>
                             <div className="font-medium">Manage Blogs</div>
                         </button>
-                        <button className="bg-purple-600 text-white p-4 rounded-lg hover:bg-purple-700 transition-colors">
+                        <button className="bg-purple-600 text-white p-4 rounded-lg hover:bg-purple-700 transition-colors opacity-50 cursor-not-allowed">
                             <div className="text-2xl mb-2">⚙️</div>
                             <div className="font-medium">Hospital Settings</div>
+                            <div className="text-xs mt-1">Coming Soon</div>
                         </button>
-                        <button className="bg-orange-600 text-white p-4 rounded-lg hover:bg-orange-700 transition-colors">
+                        <button className="bg-orange-600 text-white p-4 rounded-lg hover:bg-orange-700 transition-colors opacity-50 cursor-not-allowed">
                             <div className="text-2xl mb-2">📧</div>
                             <div className="font-medium">Messages</div>
+                            <div className="text-xs mt-1">Coming Soon</div>
                         </button>
                     </div>
                 </div>
