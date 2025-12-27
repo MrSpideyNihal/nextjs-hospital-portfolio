@@ -147,7 +147,7 @@ export default function ManageDoctors() {
                                         required
                                         value={formData.name}
                                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                                        className="w-full px-3 py-2 border rounded-lg"
+                                        className="w-full px-3 py-2 border rounded-lg text-gray-900"
                                     />
                                 </div>
                                 <div>
@@ -157,7 +157,7 @@ export default function ManageDoctors() {
                                         required
                                         value={formData.specialty}
                                         onChange={(e) => setFormData({ ...formData, specialty: e.target.value })}
-                                        className="w-full px-3 py-2 border rounded-lg"
+                                        className="w-full px-3 py-2 border rounded-lg text-gray-900"
                                     />
                                 </div>
                                 <div>
@@ -167,7 +167,7 @@ export default function ManageDoctors() {
                                         required
                                         value={formData.experience}
                                         onChange={(e) => setFormData({ ...formData, experience: parseInt(e.target.value) })}
-                                        className="w-full px-3 py-2 border rounded-lg"
+                                        className="w-full px-3 py-2 border rounded-lg text-gray-900"
                                     />
                                 </div>
                                 <div>
@@ -177,7 +177,7 @@ export default function ManageDoctors() {
                                         required
                                         value={formData.email}
                                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                                        className="w-full px-3 py-2 border rounded-lg"
+                                        className="w-full px-3 py-2 border rounded-lg text-gray-900"
                                     />
                                 </div>
                                 <div>
@@ -187,7 +187,7 @@ export default function ManageDoctors() {
                                         required
                                         value={formData.phone}
                                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                                        className="w-full px-3 py-2 border rounded-lg"
+                                        className="w-full px-3 py-2 border rounded-lg text-gray-900"
                                     />
                                 </div>
                                 <div>
@@ -196,7 +196,7 @@ export default function ManageDoctors() {
                                         type="url"
                                         value={formData.imageUrl || ''}
                                         onChange={(e) => setFormData({ ...formData, imageUrl: e.target.value })}
-                                        className="w-full px-3 py-2 border rounded-lg"
+                                        className="w-full px-3 py-2 border rounded-lg text-gray-900"
                                         placeholder="https://i.imgur.com/example.jpg"
                                     />
                                     <p className="text-xs text-gray-500 mt-1">Upload to Imgur and paste URL here</p>
@@ -209,7 +209,7 @@ export default function ManageDoctors() {
                                     rows={4}
                                     value={formData.bio}
                                     onChange={(e) => setFormData({ ...formData, bio: e.target.value })}
-                                    className="w-full px-3 py-2 border rounded-lg"
+                                    className="w-full px-3 py-2 border rounded-lg text-gray-900"
                                 />
                             </div>
                             <div className="flex gap-2">

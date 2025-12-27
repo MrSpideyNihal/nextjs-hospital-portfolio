@@ -150,7 +150,7 @@ export default function ManageBlogs() {
                                     required
                                     value={formData.title}
                                     onChange={(e) => setFormData({ ...formData, title: e.target.value })}
-                                    className="w-full px-3 py-2 border rounded-lg"
+                                    className="w-full px-3 py-2 border rounded-lg text-gray-900"
                                 />
                             </div>
                             <div>
@@ -160,7 +160,7 @@ export default function ManageBlogs() {
                                     rows={10}
                                     value={formData.content}
                                     onChange={(e) => setFormData({ ...formData, content: e.target.value })}
-                                    className="w-full px-3 py-2 border rounded-lg font-mono text-sm"
+                                    className="w-full px-3 py-2 border rounded-lg font-mono text-sm text-gray-900"
                                     placeholder="Write your blog content here... (supports HTML)"
                                 />
                             </div>
@@ -171,7 +171,7 @@ export default function ManageBlogs() {
                                         type="text"
                                         value={formData.author}
                                         onChange={(e) => setFormData({ ...formData, author: e.target.value })}
-                                        className="w-full px-3 py-2 border rounded-lg"
+                                        className="w-full px-3 py-2 border rounded-lg text-gray-900"
                                     />
                                 </div>
                                 <div>
@@ -180,7 +180,7 @@ export default function ManageBlogs() {
                                         type="text"
                                         value={formData.tags}
                                         onChange={(e) => setFormData({ ...formData, tags: e.target.value })}
-                                        className="w-full px-3 py-2 border rounded-lg"
+                                        className="w-full px-3 py-2 border rounded-lg text-gray-900"
                                         placeholder="health, wellness, tips"
                                     />
                                 </div>
@@ -190,7 +190,7 @@ export default function ManageBlogs() {
                                         type="url"
                                         value={formData.imageUrl || ''}
                                         onChange={(e) => setFormData({ ...formData, imageUrl: e.target.value })}
-                                        className="w-full px-3 py-2 border rounded-lg"
+                                        className="w-full px-3 py-2 border rounded-lg text-gray-900"
                                         placeholder="https://i.imgur.com/example.jpg"
                                     />
                                     <p className="text-xs text-gray-500 mt-1">Upload to Imgur and paste URL here</p>
