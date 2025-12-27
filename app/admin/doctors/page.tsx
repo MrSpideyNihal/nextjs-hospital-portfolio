@@ -11,6 +11,7 @@ interface Doctor {
     experience: number;
     email: string;
     phone: string;
+    imageUrl?: string;
 }
 
 export default function ManageDoctors() {
@@ -25,6 +26,7 @@ export default function ManageDoctors() {
         experience: 0,
         email: '',
         phone: '',
+        imageUrl: '',
     });
     const router = useRouter();
 
@@ -67,7 +69,7 @@ export default function ManageDoctors() {
             if (res.ok) {
                 setShowForm(false);
                 setEditingId(null);
-                setFormData({ name: '', specialty: '', bio: '', experience: 0, email: '', phone: '' });
+                setFormData({ name: '', specialty: '', bio: '', experience: 0, email: '', phone: '', imageUrl: '' });
                 fetchDoctors();
             }
         } catch (error) {
@@ -83,6 +85,7 @@ export default function ManageDoctors() {
             experience: doctor.experience,
             email: doctor.email,
             phone: doctor.phone,
+            imageUrl: doctor.imageUrl || '',
         });
         setEditingId(doctor._id);
         setShowForm(true);
@@ -121,7 +124,7 @@ export default function ManageDoctors() {
                             onClick={() => {
                                 setShowForm(true);
                                 setEditingId(null);
-                                setFormData({ name: '', specialty: '', bio: '', experience: 0, email: '', phone: '' });
+                                setFormData({ name: '', specialty: '', bio: '', experience: 0, email: '', phone: '', imageUrl: '' });
                             }}
                             className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700"
                         >
@@ -186,6 +189,17 @@ export default function ManageDoctors() {
                                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                                         className="w-full px-3 py-2 border rounded-lg"
                                     />
+                                </div>
+                                <div>
+                                    <label className="block text-sm font-medium mb-1">Image URL</label>
+                                    <input
+                                        type="url"
+                                        value={formData.imageUrl || ''}
+                                        onChange={(e) => setFormData({ ...formData, imageUrl: e.target.value })}
+                                        className="w-full px-3 py-2 border rounded-lg"
+                                        placeholder="https://i.imgur.com/example.jpg"
+                                    />
+                                    <p className="text-xs text-gray-500 mt-1">Upload to Imgur and paste URL here</p>
                                 </div>
                             </div>
                             <div>

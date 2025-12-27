@@ -25,6 +25,7 @@ export default function ManageBlogs() {
         author: 'Admin',
         published: false,
         tags: '',
+        imageUrl: '',
     });
     const router = useRouter();
 
@@ -181,6 +182,17 @@ export default function ManageBlogs() {
                                         placeholder="health, wellness, tips"
                                     />
                                 </div>
+                                <div className="md:col-span-2">
+                                    <label className="block text-sm font-medium mb-1">Featured Image URL</label>
+                                    <input
+                                        type="url"
+                                        value={formData.imageUrl || ''}
+                                        onChange={(e) => setFormData({ ...formData, imageUrl: e.target.value })}
+                                        className="w-full px-3 py-2 border rounded-lg"
+                                        placeholder="https://i.imgur.com/example.jpg"
+                                    />
+                                    <p className="text-xs text-gray-500 mt-1">Upload to Imgur and paste URL here</p>
+                                </div>
                             </div>
                             <div className="flex items-center gap-2">
                                 <input
@@ -241,8 +253,8 @@ export default function ManageBlogs() {
                                         <td className="px-6 py-4">{blog.author}</td>
                                         <td className="px-6 py-4">
                                             <span className={`px-2 py-1 rounded text-xs ${blog.published
-                                                    ? 'bg-green-100 text-green-800'
-                                                    : 'bg-yellow-100 text-yellow-800'
+                                                ? 'bg-green-100 text-green-800'
+                                                : 'bg-yellow-100 text-yellow-800'
                                                 }`}>
                                                 {blog.published ? 'Published' : 'Draft'}
                                             </span>
