@@ -17,7 +17,7 @@ export default function Home() {
             </p>
             <div className="flex flex-wrap gap-4">
               <Link href="/contact">
-                <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100">
+                <Button size="lg" className="bg-blue text-white-600 hover:bg-gray-100">
                   Book Appointment
                 </Button>
               </Link>
