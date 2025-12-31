@@ -1,5 +1,7 @@
 # Hospital Portfolio Website
 
+https://nihalwork.netlify.app/
+
 A complete, production-ready hospital portfolio website built with **Next.js 14**, **React**, **Tailwind CSS**, and **MongoDB**. Features a public-facing site with doctor profiles, blog posts, and services, plus a secure admin dashboard for content management. Fully deployable to **Netlify** with serverless functions.
 
 ![Next.js](https://img.shields.io/badge/Next.js-14-black) ![TypeScript](https://img.shields.io/badge/TypeScript-5-blue) ![Tailwind CSS](https://img.shields.io/badge/Tailwind-3-38bdf8) ![MongoDB](https://img.shields.io/badge/MongoDB-Atlas-green)
